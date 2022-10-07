@@ -19,10 +19,10 @@ type Scanner struct{}
 var _ detectors.Detector = (*Scanner)(nil)
 
 var (
-client = common.SaneHttpClient()
+	client = common.SaneHttpClient()
 
-//Make sure that your group is surrounded in boundry characters such as below to reduce false positives
-keyPat = regexp.MustCompile(detectors.PrefixRegex([]string{"twitter"}) + `\b([A-Z]{22}%[a-zA-Z-0-9]{23}%[a-zA-Z-0-9]{6}%[a-zA-Z-0-9]{3}%[a-zA-Z-0-9]{9}%[a-zA-Z-0-9]{52})\b`)
+	//Make sure that your group is surrounded in boundry characters such as below to reduce false positives
+	keyPat = regexp.MustCompile(detectors.PrefixRegex([]string{"twitter"}) + `\b([A-Z]{22}%[a-zA-Z-0-9]{23}%[a-zA-Z-0-9]{6}%[a-zA-Z-0-9]{3}%[a-zA-Z-0-9]{9}%[a-zA-Z-0-9]{52})\b`)
 )
 
 // Keywords are used for efficiently pre-filtering chunks.
