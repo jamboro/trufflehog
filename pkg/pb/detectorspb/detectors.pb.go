@@ -966,6 +966,7 @@ const (
 	DetectorType_MongoDB                       DetectorType = 895
 	DetectorType_NGC                           DetectorType = 896
 	DetectorType_DigitalOceanV2                DetectorType = 897
+	DetectorType_PrivateIPAddress              DetectorType = 898
 )
 
 // Enum value maps for DetectorType.
@@ -1865,6 +1866,7 @@ var (
 		895: "MongoDB",
 		896: "NGC",
 		897: "DigitalOceanV2",
+		898: "privateipaddress",
 	}
 	DetectorType_value = map[string]int32{
 		"Alibaba":                       0,
@@ -2761,6 +2763,7 @@ var (
 		"MongoDB":                       895,
 		"NGC":                           896,
 		"DigitalOceanV2":                897,
+		"privateipaddress":              898,
 	}
 )
 
